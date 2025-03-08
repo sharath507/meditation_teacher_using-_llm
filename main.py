@@ -19,7 +19,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Configuration for LLM API
 WEBUI_ENABLED = True  # Set to use open-webui API
 WEBUI_BASE_URL = "https://chat.ivislabs.in/api"
-API_KEY = "sk-1e4f3cd58aa24040b0e8a8813380a229"  # Replace with actual API key
+API_KEY = "INSERT_YOUR_API_KEY"  # Replace with actual API key
 DEFAULT_MODEL = "gemma2:2b"  # Update to an available model
 
 OLLAMA_ENABLED = True  # Fallback to local Ollama API
