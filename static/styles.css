@@ -1,0 +1,150 @@
+/* static/styles.css */
+:root {
+    --primary-color: #2e3b4e;
+    --secondary-color: #4a90e2;
+    --accent-color: #50c878;
+    --background-color: #eef2f3;
+    --text-color: #333;
+    --light-gray: #dce1e3;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(225, 212, 212, 0.058);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+header {
+    background-color: #ced6e2;;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.form-container {
+    padding: 30px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+.results-container {
+    padding: 30px;
+}
+
+.results-container h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+}
+
+#results {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    line-height: 1.8;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: var(--accent-color);
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#copyBtn {
+    background-color: var(--accent-color);
+}
+
+#copyBtn:hover {
+    background-color: #3ea76d;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    header {
+        padding: 20px;
+    }
+    .form-container, .results-container {
+        padding: 20px;
+    }
+    input, select, button {
+        padding: 10px;
+    }
+}
